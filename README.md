@@ -1,20 +1,15 @@
 # region
-淘宝四级地址库
+淘宝四级地址库: 包括省、市、区/县、街道/镇
 
-包括省、市、区/县、街道/镇
-
-数据来源：<br /> 
-中华人民共和国国家统计局<br /> 
+数据来源：中华人民共和国国家统计局<br /> 
 行政区划代码<br /> 
 统计用区划和城乡划分代码<br /> 
 
 在上述基础数据上有所加工，为了和淘宝（菜鸟）四级地址库保持完全一致。
 
 
-
 技术说明：
-1. 包含shell script一份region.sh，依赖mysql mysql-config-editor 工具，为了不再脚本中显示出现代码
-<br /> 
+1. 包含shell script一份region.sh，依赖mysql mysql-config-editor 工具，为了不再脚本中显示出现代码<br /> 
 参考文章：
 http://dev.mysql.com/doc/refman/5.6/en/mysql-config-editor.html
 http://stackoverflow.com/questions/20751352/suppress-warning-messages-using-mysql-from-within-terminal-but-password-written
@@ -24,8 +19,7 @@ http://stackoverflow.com/questions/20751352/suppress-warning-messages-using-mysq
 /usr/local/mysql/bin/mysql_config_editor set --login-path=client --host=127.0.0.1 --port=3306 --user=beta --password<br /> 
 /usr/local/mysql/bin/mysql_config_editor print --all
 
-2. region.sql 一份，可以直接导入你的数据库
-<br /> 
+2. region.sql 一份，可以直接导入你的数据库<br /> 
 CREATE TABLE `region` (<br /> 
   `region_id` int(10) unsigned NOT NULL AUTO_INCREMENT,<br /> 
   `parent_id` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '父区域id',<br /> 
@@ -36,6 +30,8 @@ CREATE TABLE `region` (<br />
   KEY `region_type` (`region_type`) USING BTREE<br /> 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='region区域表';<br /> 
 
+
+![image](https://github.com/zhuweijin/region/raw/master/donate.jpeg)
 
 
 
