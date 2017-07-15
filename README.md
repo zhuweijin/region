@@ -14,14 +14,14 @@
 
 技术说明：
 1. 包含shell script一份region.sh，依赖mysql mysql-config-editor 工具，为了不再脚本中显示出现代码
+<br /> 
 参考文章：
 http://dev.mysql.com/doc/refman/5.6/en/mysql-config-editor.html
 http://stackoverflow.com/questions/20751352/suppress-warning-messages-using-mysql-from-within-terminal-but-password-written
 
 <br /> 
-参考命令：请换成自己mysql目录
-/usr/local/mysql/bin/mysql_config_editor set --login-path=client --host=127.0.0.1 --port=3306 --user=beta --password
-<br /> 
+参考命令：请换成自己mysql目录<br /> 
+/usr/local/mysql/bin/mysql_config_editor set --login-path=client --host=127.0.0.1 --port=3306 --user=beta --password<br /> 
 /usr/local/mysql/bin/mysql_config_editor print --all
 
 2. region.sql 一份，可以直接导入你的数据库
