@@ -10,7 +10,7 @@
 
 技术说明：
 1. 包含shell script一份region.sh，依赖mysql mysql-config-editor 工具，为了不再脚本中显示出现代码<br /> 
-参考文章：
+参考文章：<br />
 http://dev.mysql.com/doc/refman/5.6/en/mysql-config-editor.html
 http://stackoverflow.com/questions/20751352/suppress-warning-messages-using-mysql-from-within-terminal-but-password-written
 
