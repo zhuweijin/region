@@ -23,7 +23,15 @@ http://stackoverflow.com/questions/20751352/suppress-warning-messages-using-mysq
 /usr/local/mysql/bin/mysql_config_editor print --all
 
 2. region.sql 一份，可以直接导入你的数据库
-
+CREATE TABLE `region` (
+  `region_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '父区域id',
+  `region_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '区域名称',
+  `region_type` tinyint(1) NOT NULL DEFAULT '2' COMMENT '区域类型，0-中国、1-省、2-市、3-区、4-街道',
+  PRIMARY KEY (`region_id`),
+  KEY `parent_id` (`parent_id`) USING BTREE,
+  KEY `region_type` (`region_type`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='region区域表';
 
 
 
